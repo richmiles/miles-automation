@@ -28,7 +28,7 @@
   <header id="main-header">
     <div class="contents">
       <a href="#" class="logo-container">
-        <img src="assets/images/logo.png" alt="Miles Automation Logo">
+        <img src="assets/images/logo.svg" alt="Miles Automation Logo">
         <span class="company-name">Miles Automation</span>
       </a>
       
@@ -50,39 +50,97 @@
   <main>
     <!-- Hero Section -->
     <section id="hero" data-aos="fade-up">
-      <div class="hero-content">
-        <h1>Next-Generation <span class="hero-typing"></span></h1>
-        <p>Custom AI systems and developer tools that think alongside your team</p>
-        <div class="hero-buttons">
-          <a href="#products" class="btn btn-primary">Explore Products</a>
-          <a href="#contact" class="btn btn-outline">Get in Touch</a>
+        <div class="hero-content">
+          <h1><span class="hero-static">Next Generation</span><br><span class="hero-typing"></span></h1>
+          <p>Custom AI systems and developer tools that think alongside your team</p>
+          <div class="hero-buttons">
+            <a href="#products" class="btn btn-primary">Explore Products</a>
+            <a href="#contact" class="btn btn-outline">Get in Touch</a>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
     <!-- Products Section -->
     <section id="products" data-aos="fade-up">
       <h1>Products</h1>
       <div class="products-grid">
         <div class="service-card" data-aos="fade-up" data-aos-delay="100">
-          <div class="card-icon">
-            <i class="fas fa-network-wired"></i>
+          <div class="card-header">
+            <div class="card-icon">
+              <!-- Inline SVG for Spark Swarm -->
+              <svg width="64" height="64" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="sparkGradient" x1="0" y1="0" x2="64" y2="64">
+                    <stop offset="0%" stop-color="#2D3748"/>
+                    <stop offset="100%" stop-color="#1A202C"/>
+                  </linearGradient>
+                </defs>
+              
+                <circle cx="32" cy="32" r="31" fill="url(#sparkGradient)" stroke="#CBD5E0" stroke-width="1.5"/>
+              
+                <g stroke="#2563EB" stroke-width="1" class="connections">
+                  <line x1="32" y1="32" x2="32" y2="12"/>
+                  <line x1="32" y1="32" x2="49.5" y2="22"/>
+                  <line x1="32" y1="32" x2="49.5" y2="42"/>
+                  <line x1="32" y1="32" x2="32" y2="52"/>
+                  <line x1="32" y1="32" x2="14.5" y2="42"/>
+                  <line x1="32" y1="32" x2="14.5" y2="22"/>
+                </g>
+              
+                <g fill="#3B82F6" stroke="#CBD5E0" stroke-width="1">
+                  <circle class="central-node" cx="32" cy="32" r="4"/>
+                  <circle class="outer-node" cx="32" cy="12" r="3"/>
+                  <circle class="outer-node" cx="49.5" cy="22" r="3"/>
+                  <circle class="outer-node" cx="49.5" cy="42" r="3"/>
+                  <circle class="outer-node" cx="32" cy="52" r="3"/>
+                  <circle class="outer-node" cx="14.5" cy="42" r="3"/>
+                  <circle class="outer-node" cx="14.5" cy="22" r="3"/>
+                </g>
+              </svg>
+            </div>
+            <h3>Spark Swarm</h3>
           </div>
-          <h3>Spark Swarm</h3>
           <p>A modular framework for building autonomous AI agents. Spark Swarm integrates LLMs like ChatGPT, Claude, and Gemini to coordinate complex workflows, reasoning steps, and collaborative tasks. Designed for knowledge work, research, and multi-step decision-making.</p>
           <a href="#contact" class="learn-more">Learn More <i class="fas fa-arrow-right"></i></a>
         </div>
         
         <div class="service-card" data-aos="fade-up" data-aos-delay="200">
-          <div class="card-icon">
-            <i class="fas fa-code"></i>
+          <div class="card-header">
+            <div class="card-icon">
+              <!-- Inline SVG for Code Loom -->
+              <div class="code-loom-logo">
+              <svg width="64" height="64" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="bgGradient" x1="0" y1="0" x2="64" y2="64">
+                    <stop offset="0%" stop-color="#2D3748"/>
+                    <stop offset="100%" stop-color="#1A202C"/>
+                  </linearGradient>
+                </defs>
+                <circle cx="32" cy="32" r="31" fill="url(#bgGradient)" stroke="#CBD5E0" stroke-width="1.5"/>
+                <g stroke="#3B82F6" stroke-width="2" stroke-linecap="round" class="weave-lines">
+                  <line x1="12" y1="22" x2="42" y2="52"/>
+                  <line x1="17" y1="17" x2="47" y2="47"/>
+                  <line x1="22" y1="12" x2="52" y2="42"/>
+                  <line x1="7" y1="27" x2="37" y2="57"/>
+                  <line x1="27" y1="7" x2="57" y2="37"/>
+                  <line x1="52" y1="22" x2="22" y2="52" stroke="#2563EB" stroke-dasharray="6,3"/>
+                  <line x1="47" y1="17" x2="17" y2="47" stroke="#2563EB" stroke-dasharray="6,3"/>
+                  <line x1="42" y1="12" x2="12" y2="42" stroke="#2563EB" stroke-dasharray="6,3"/>
+                  <line x1="57" y1="27" x2="27" y2="57" stroke="#2563EB" stroke-dasharray="6,3"/>
+                  <line x1="37" y1="7" x2="7" y2="37" stroke="#2563EB" stroke-dasharray="6,3"/>
+                </g>
+                <text x="32" y="42" fill="#CBD5E0" font-family="monospace" font-size="30" font-weight="bold" text-anchor="middle" class="brackets">{ }</text>
+              </svg>
+            </div>
+            </div>
+            <h3>Code Loom</h3>
           </div>
-          <h3>Code Loom</h3>
           <p>A VS Code extension that contextualizes your development environment using AI. Code Loom maps relationships between files, functions, and modules—surfacing insight when and where you need it most. Designed to enhance focus, architecture awareness, and flow state.</p>
           <a href="#contact" class="learn-more">Learn More <i class="fas fa-arrow-right"></i></a>
         </div>
       </div>
     </section>
+    
 
     <!-- Services Section -->
     <section id="services" data-aos="fade-up">
@@ -152,8 +210,8 @@
       <h1>Contact</h1>
       <div class="contact-content">
         <p>Let's explore what AI can do for your team. Reach out to discuss your project requirements and how we can help elevate your development workflows.</p>
-        <a href="mailto:me@richmiles.xyz" class="mailto-link">
-          <i class="fas fa-envelope"></i> me@richmiles.xyz
+        <a href="mailto:info@milesautomation.com" class="mailto-link">
+          <i class="fas fa-envelope"></i> info@milesautomation.com
         </a>
       </div>
     </section>

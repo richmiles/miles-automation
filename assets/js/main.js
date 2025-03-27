@@ -92,15 +92,15 @@ document.addEventListener('DOMContentLoaded', function() {
       link.addEventListener('click', closeNavOnClick);
     });
   
-    // Typed.js effect for hero text (slower, less “flashy”)
+    // Typed.js effect for hero text (MODIFIED: significantly slower typing)
     const heroTextElement = document.querySelector('.hero-typing');
     if (heroTextElement && typeof Typed !== 'undefined') {
       new Typed(heroTextElement, {
         strings: ['AI Solutions', 'Developer Tools', 'LLM Integration', 'Agentic Systems'],
-        typeSpeed: 60,
-        backSpeed: 30,
-        backDelay: 1000,
-        startDelay: 300,
+        typeSpeed: 100,        // Increased from 60 to 100
+        backSpeed: 20,         // Decreased from 30 to 20
+        backDelay: 2000,       // Increased from 1000 to 2000
+        startDelay: 500,       // Increased from 300 to 500
         loop: true
       });
     }
@@ -126,4 +126,24 @@ document.addEventListener('DOMContentLoaded', function() {
       document.body.classList.add('page-loaded');
     }
   });
-  
+
+  // Grab the container of the Code Loom logo
+const codeLoomLogo = document.querySelector('.code-loom-logo');
+
+if (codeLoomLogo) {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        // Add the .animate class to trigger the lines' fade-in
+        codeLoomLogo.classList.add('animate');
+
+        // If you only want the animation once, unobserve afterwards:
+        observer.unobserve(codeLoomLogo);
+      }
+    });
+  }, {
+    threshold: 0.3 // Adjust this threshold as desired (0.0 - 1.0)
+  });
+
+  observer.observe(codeLoomLogo);
+}

@@ -1,0 +1,35 @@
+<svg width="128" height="128" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="sparkGradient" x1="0" y1="0" x2="128" y2="128">
+      <stop offset="0%" stop-color="#2D3748"/>
+      <stop offset="100%" stop-color="#1A202C"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Gradient background circle -->
+  <circle cx="64" cy="64" r="62" fill="url(#sparkGradient)" stroke="#CBD5E0" stroke-width="3"/>
+
+  <!-- Swarm nodes -->
+  <g fill="#3B82F6" stroke="#CBD5E0" stroke-width="2">
+    <!-- Central Spark -->
+    <circle class="central-node" cx="64" cy="64" r="8"/>
+
+    <!-- Outer nodes -->
+    <circle class="outer-node" cx="64" cy="24" r="5"/>
+    <circle class="outer-node" cx="99" cy="44" r="5"/>
+    <circle class="outer-node" cx="99" cy="84" r="5"/>
+    <circle class="outer-node" cx="64" cy="104" r="5"/>
+    <circle class="outer-node" cx="29" cy="84" r="5"/>
+    <circle class="outer-node" cx="29" cy="44" r="5"/>
+  </g>
+
+  <!-- Connections -->
+  <g stroke="#2563EB" stroke-width="2" class="connections">
+    <line x1="64" y1="64" x2="64" y2="24"/>
+    <line x1="64" y1="64" x2="99" y2="44"/>
+    <line x1="64" y1="64" x2="99" y2="84"/>
+    <line x1="64" y1="64" x2="64" y2="104"/>
+    <line x1="64" y1="64" x2="29" y2="84"/>
+    <line x1="64" y1="64" x2="29" y2="44"/>
+  </g>
+</svg>
