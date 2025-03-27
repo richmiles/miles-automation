@@ -139,12 +139,12 @@ header .contents {
 
 .company-name {
   font-family: 'Electrolize', sans-serif;
-  margin-left: 0.8rem;
+  margin-left: 0rem;
   font-size: 2rem;
   font-weight: bold;
   font-variant: small-caps; 
   letter-spacing: 1px;
-  color: #E0E0E0; /* Already silver */
+  color: #C0C0C0; /* Already silver */
 }
 
 /* Navigation */
