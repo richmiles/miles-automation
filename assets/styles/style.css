@@ -1,13 +1,16 @@
+/* Import Electrolize font for headers */
+@import url('https://fonts.googleapis.com/css2?family=Electrolize&display=swap');
+
 :root {
   --color-background: #0F172A;
   --color-surface: #1E293B;
-  --color-header: #0B1120;
+  --color-header: #1A2942;  /* Changed from #0B1120 to a slightly lighter shade */
 
-  --color-primary: #3B82F6;
-  --color-primary-hover: #2563EB;
+  --color-primary: #60A5FA;  /* Changed from #3B82F6 to a more vibrant blue */
+  --color-primary-hover: #4F8FFF;  /* Adjusted hover state */
 
   --color-text: #F8FAFC;
-  --color-text-secondary: #94A3B8;
+  --color-text-secondary: #A3B3CC;  /* Lightened from #94A3B8 for better readability */
 
   --color-border: #334155;
   --color-highlight-bg: rgba(30, 58, 138, 0.1);
@@ -35,23 +38,20 @@
 }
 
 .service-card .card-header h3 {
-  color: var(--color-text); /* white color */
-  font-size: 1.8rem;        /* increased size */
+  color: var(--color-text); 
+  font-size: 1.8rem;
   margin: 0;
   padding-bottom: 0;
   position: static;
+  font-family: 'Electrolize', sans-serif;
+  font-variant: small-caps;
+  letter-spacing: 0.03em;
+  font-weight: 500;
 }
 
 .service-card .card-header h3::after {
   display: none; /* Remove underline */
 }
-
-/* Existing CSS continues here... */
-
-/* You can append your existing CSS below unchanged, as only the above adjustments are required. */
-
-
-
 
 /* Base Styles */
 * {
@@ -97,12 +97,12 @@ a {
 }
 
 a:hover {
-  color: var(--color-primary-light);
+  color: var(--color-primary);  /* Changed to primary color for consistency */
 }
 
 /* Header */
 header {
-  background: rgba(0, 0, 0, 0.8);
+  background: var(--color-header);  /* Using the new header color variable */
   backdrop-filter: blur(8px);
   position: sticky;
   top: 0;
@@ -114,7 +114,7 @@ header {
 
 header.scrolled {
   padding: 0.5rem 0;
-  background: rgba(0, 0, 0, 0.95);
+  background: rgba(26, 41, 66, 0.95);  /* Adjusted to match new header color */
 }
 
 header .contents {
@@ -138,12 +138,13 @@ header .contents {
 }
 
 .company-name {
-  font-family: var(--font-display);
+  font-family: 'Electrolize', sans-serif;
   margin-left: 0.8rem;
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: bold;
+  font-variant: small-caps; 
   letter-spacing: 1px;
-  color: var(--color-primary);
+  color: #E0E0E0; /* Already silver */
 }
 
 /* Navigation */
@@ -166,7 +167,7 @@ nav ul li {
 
 nav ul li a {
   text-decoration: none;
-  color: var(--color-text);
+  color: #E0E0E0; /* Changed from var(--color-text) to silver */
   font-size: 1.1rem;
   font-weight: 500;
   text-transform: uppercase;
@@ -182,7 +183,7 @@ nav ul li a::after {
   left: 0;
   width: 0;
   height: 1px;
-  background: var(--color-accent);
+  background: var(--color-primary);  /* Changed to primary color */
   transition: width 0.3s ease;
 }
 
@@ -194,7 +195,7 @@ nav ul li a:hover::after {
   display: none;
   background: none;
   border: none;
-  color: var(--color-text);
+  color: #E0E0E0; /* Changed from var(--color-text) to silver */
   font-size: 1.5rem;
   cursor: pointer;
 }
@@ -207,7 +208,7 @@ main {
 }
 
 section {
-  background: var(--color-dark-lighter);
+  background: linear-gradient(135deg, var(--color-background), var(--color-surface));  /* Added gradient */
   border-radius: 4px;
   padding: 2.5rem;
   margin: 3rem 0;
@@ -220,6 +221,10 @@ section h1 {
   position: relative;
   display: inline-block;
   margin-bottom: 1.5rem;
+  font-family: 'Electrolize', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-variant: small-caps;
 }
 
 section h1::after {
@@ -229,7 +234,7 @@ section h1::after {
   left: 0;
   width: 50%;
   height: 3px;
-  background: var(--color-primary-light);
+  background: var(--color-primary);  /* Updated to use primary color */
 }
 
 /* Hero Section */
@@ -271,12 +276,12 @@ section h1::after {
 
 .btn-primary {
   background-color: var(--color-primary);
-  color: var(--color-dark-lighter);
+  color: var(--color-background);  /* Darkened from var(--color-dark-lighter) for better contrast */
 }
 
 .btn-primary:hover {
-  background-color: var(--color-primary-light);
-  color: var(--color-dark);
+  background-color: var(--color-primary-hover);
+  color: var(--color-background);
 }
 
 .btn-outline {
@@ -286,7 +291,7 @@ section h1::after {
 
 .btn-outline:hover {
   background-color: var(--color-primary);
-  color: var(--color-dark-lighter);
+  color: var(--color-background);
 }
 
 /* Products & Services Styles */
@@ -298,7 +303,7 @@ section h1::after {
 }
 
 .service-card {
-  background: var(--color-dark-lighter);
+  background: var(--color-surface);
   border-radius: 4px;
   padding: 1.5rem;
   border: 1px solid rgba(255, 255, 255, 0.05);
@@ -310,7 +315,7 @@ section h1::after {
 
 .service-card:hover {
   transform: translateY(-3px);
-  border-color: var(--color-primary-light);
+  border-color: var(--color-primary);
 }
 
 .card-icon {
@@ -334,7 +339,7 @@ section h1::after {
   left: 0;
   width: 40px;
   height: 2px;
-  background: var(--color-primary-light);
+  background: var(--color-primary);
 }
 
 .service-card p {
@@ -347,7 +352,7 @@ section h1::after {
 .learn-more {
   display: inline-block;
   margin-top: 1rem;
-  color: var(--color-accent);
+  color: var(--color-primary);  /* Changed to primary color */
   font-weight: 500;
 }
 
@@ -376,7 +381,7 @@ section h1::after {
 }
 
 .service-list li {
-  background: var(--color-dark-lighter);
+  background: var(--color-surface);
   border-radius: 4px;
   padding: 1.2rem;
   border: 1px solid rgba(255, 255, 255, 0.05);
@@ -387,7 +392,7 @@ section h1::after {
 
 .service-list li:hover {
   transform: translateY(-3px);
-  border-color: var(--color-primary-light);
+  border-color: var(--color-primary);
 }
 
 .service-list li::before {
@@ -403,6 +408,9 @@ section h1::after {
   color: var(--color-primary);
   font-size: 1.1rem;
   margin-bottom: 0.3rem;
+  font-family: 'Electrolize', sans-serif;
+  font-variant: small-caps;
+  letter-spacing: 0.03em;
 }
 
 /* About Section */
@@ -432,6 +440,9 @@ section h1::after {
 
 .feature h3 {
   margin-bottom: 0.5rem;
+  font-family: 'Electrolize', sans-serif;
+  font-variant: small-caps;
+  letter-spacing: 0.03em;
 }
 
 /* Contact Section */
@@ -463,12 +474,12 @@ section h1::after {
 
 .mailto-link:hover {
   background-color: var(--color-primary);
-  color: var(--color-dark-lighter);
+  color: var(--color-background);  /* Changed to background color for better contrast */
 }
 
 /* Footer */
 footer {
-  background: var(--color-dark-lighter);
+  background: var(--color-surface);  /* Changed from --color-dark-lighter */
   color: var(--color-text-secondary);
   text-align: center;
   padding: 1rem 0;
@@ -484,7 +495,7 @@ footer {
   width: 32px;
   height: 32px;
   background-color: var(--color-primary);
-  color: var(--color-dark);
+  color: var(--color-background);  /* Changed to background color */
   border: none;
   border-radius: 50%;
   cursor: pointer;
@@ -503,7 +514,7 @@ footer {
 }
 
 .scroll-top:hover {
-  background-color: var(--color-primary-light);
+  background-color: var(--color-primary-hover);
 }
 
 /* Simple fade animation for AOS */
@@ -525,7 +536,7 @@ footer {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: var(--color-dark);
+  background-color: var(--color-background);  /* Changed from --color-dark */
   z-index: 9999;
   display: flex;
   justify-content: center;
@@ -541,7 +552,7 @@ footer {
 .loader {
   width: 40px;
   height: 40px;
-  border: 3px solid rgba(42, 61, 102, 0.3);
+  border: 3px solid rgba(65, 85, 125, 0.3);  /* Lightened slightly */
   border-radius: 50%;
   border-top-color: var(--color-primary);
   animation: spin 0.9s linear infinite;
@@ -580,7 +591,7 @@ footer {
     right: -100%;
     width: 70%;
     height: 100vh;
-    background: rgba(22, 27, 34, 0.95);
+    background: rgba(26, 41, 66, 0.95);  /* Changed to match new header */
     backdrop-filter: blur(10px);
     flex-direction: column;
     justify-content: center;
