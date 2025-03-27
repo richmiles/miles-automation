@@ -1,123 +1,249 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Miles Automation</title>
-    <link rel="stylesheet" href="style.css">
-
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-    <!-- Add Favicon -->
-    <link rel="icon" type="image/png" href="favicon.png">
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Miles Automation - Boutique AI consultancy specializing in agentic AI systems and developer tooling.">
+  <title>Miles Automation | Advanced AI Solutions</title>
+  <link rel="icon" href="favicon.png" type="image/png">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  <link rel="stylesheet" href="assets/styles/style.css">
 </head>
-
 <body>
-    <header>
-        <div class="contents">
-            <div class="logo-container">
-                <img src="logo.png" alt="Miles Automation Logo">
-                <span class="company-name">Miles Automation</span>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
+  <!-- Page Loading Animation -->
+  <div class="page-transition">
+    <div class="loader"></div>
+  </div>
+  
+  <!-- Animated Background -->
+  <div class="animated-bg">
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+  </div>
+  
+  <header id="main-header">
+    <div class="contents">
+      <a href="#" class="logo-container">
+        <img src="assets/images/logo.png" alt="Miles Automation Logo">
+        <span class="company-name">Miles Automation</span>
+      </a>
+      
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+      
+      <nav>
+        <ul id="nav-menu">
+          <li><a href="#products" class="nav-link">Products</a></li>
+          <li><a href="#services" class="nav-link">Services</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="hero" data-aos="fade-up">
+      <div class="hero-content">
+        <h1>Next-Generation <span class="hero-typing"></span></h1>
+        <p>Custom AI systems and developer tools that think alongside your team</p>
+        <div class="hero-buttons">
+          <a href="#products" class="btn btn-primary">Explore Products</a>
+          <a href="#contact" class="btn btn-outline">Get in Touch</a>
         </div>
-    </header>
+      </div>
+      <div class="glow-effect glow-1"></div>
+    </section>
 
-
-    <main>
-        <section id="about">
-            <h1>About Us</h1>
-            <p>When digital fires blaze, you need a team that can parachute in and douse the flames. At Miles
-                Automation, we are the Smoke Jumpers of the tech world. Our seasoned consultants are ready to jump into
-                action when your project is up against the toughest challenges.</p>
-
-            <p>Whether it's rescuing a project on the brink, implementing last-minute feature requests, or debugging
-                complex systems under tight deadlines, we're the elite team you call in to turn chaos into calm. With a
-                parachute of best practices, cutting-edge tools, and rapid deployment skills, we ensure your project
-                lands safely every time.</p>
-
-            <p>Don't let tech emergencies derail your progress. Let our Smoke Jumpers take the heat and keep your
-                business soaring.</p>
-        </section>
-
-        <section id="services">
-            <h1>Our Services</h1>
-            <p>At Miles Automation, we pride ourselves on delivering cutting-edge programming solutions across a spectrum of technologies. Our team of expert consultants is not only skilled in bringing your vision to life but also excels in rescuing projects that are facing challenges. From ideation to rescue missions, we ensure your projects achieve their full potential.</p> 
-
-            <article class="service">
-                <h3>Front-End</h3>                
-                <p>Our front-end development services blend aesthetics with functionality to create outstanding user experiences. We specialize in:</p>
-                <ul>
-                    <li><strong>React:</strong> Crafting dynamic and responsive user interfaces with React, ensuring seamless user experiences across all platforms and devices.</li>
-                    <li><strong>Typescript:</strong> Utilizing TypeScript to bring strong typing to JavaScript, enhancing code quality and maintainability.</li>
-                    <li><strong>Vue:</strong> Developing interactive and modern web applications with Vue.js, focusing on ease of integration and performance.</li>
-                    <li><strong>Blazor:</strong> Leveraging Blazor for building interactive web UIs using C# instead of JavaScript, allowing for rich and responsive applications.</li>
-                </ul>
-                <p>Our team is adept at translating your vision into reality, delivering scalable and maintainable front-end solutions that drive user engagement and satisfaction.</p>
-            </article>
-            
-            <article class="service">
-                <h3>Back-End</h3>
-                <p>Our back-end development expertise lays the foundation for robust and scalable applications. We specialize in:</p>
-                <ul>
-                    <li><strong>C#:</strong> Building robust back-end systems with C#, leveraging .NET for enterprise-level applications that require scalability and reliability.</li>
-                    <li><strong>Python:</strong> Utilizing Python for its versatility in web development, data processing, and system scripting, paired with frameworks like Django and Flask.</li>
-                    <li><strong>Rust:</strong> Implementing Rust for performance-critical back-end systems, ensuring memory safety and concurrency without sacrificing speed.</li>
-                    <li><strong>Cloud Computing and Containerization:</strong> Offering cloud-based solutions and containerization for improved scalability, efficiency, and deployment speed.</li>
-                </ul>
-                <p>Our approach focuses on creating secure, efficient, and highly integrative back-end solutions, ensuring seamless operation and growth potential for your digital products.</p>
-            </article>            
-
-
-            <article class="service">
-                <h3>Database Services</h3>
-                <p>Our team at Miles Automation brings a deep understanding and extensive experience in a variety of database technologies, ensuring efficient and robust data management for your projects. We specialize in the following database systems:</p>
-                
-                <ul>
-                    <li><strong>SQL Server:</strong> Expertise in deploying, optimizing, and maintaining high-performance SQL Server environments. Our services include database design, performance tuning, security implementation, and integration with enterprise systems.</li>
-                    <li><strong>SQLite:</strong> Perfect for lightweight and embedded database needs, we provide SQLite integration and optimization services, ensuring fast, reliable, and secure data handling for mobile apps and small-scale applications.</li>
-                    <li><strong>PostgreSQL:</strong> Our team excels in implementing PostgreSQL solutions, known for its advanced features and reliability. We offer custom development, data migration, performance optimization, and large-scale deployment services.</li>
-                    <li><strong>MySQL:</strong> Specializing in MySQL database services, we deliver scalable and efficient solutions for web applications. Our expertise includes database design, tuning, replication, and cloud integration.</li>
-                </ul>
-            
-                <p>Whether you need a robust system for large-scale data processing or a streamlined solution for smaller projects, our database services are tailored to meet your specific needs. We focus on providing secure, scalable, and high-performing database solutions that align with your business objectives.</p>
-            </article>
-            
-        <article class="service">
-            <h3>Desktop Application Development</h3>
-            <p>In an era where web and mobile applications dominate, we at Miles Automation continue to recognize the unique value and necessity of desktop applications. Our desktop development services include:</p>
-            <ul>
-                <li><strong>WPF (Windows Presentation Foundation):</strong> Our team has extensive experience in developing rich desktop applications using WPF. We specialize in creating visually stunning user interfaces, leveraging the full capabilities of the .NET framework to deliver highly responsive and interactive applications.</li>
-                <li><strong>.NET MAUI (Multi-platform App UI):</strong> With the advent of .NET MAUI, we have embraced the future of cross-platform desktop application development. Our expertise in .NET MAUI enables us to build versatile desktop apps that can easily be adapted for mobile and web platforms, providing a unified development experience.</li>
-            </ul>
-            <p>Despite the shift towards web and mobile, we understand that desktop applications still play a critical role in many business operations. Whether it's for data-intensive processing, graphics-heavy applications, or providing a more secure and controlled environment, our desktop application development services ensure that your needs are met with the latest technology and best practices.</p>
-        </article>
+    <!-- Products Section -->
+    <section id="products" data-aos="fade-up">
+      <h1>Products</h1>
+      <div class="products-grid">
+        <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="card-icon">
+            <i class="fas fa-network-wired"></i>
+          </div>
+          <h3>Spark Swarm</h3>
+          <p>A modular framework for building autonomous AI agents. Spark Swarm integrates LLMs like ChatGPT, Claude, and Gemini to coordinate complex workflows, reasoning steps, and collaborative tasks. Designed for knowledge work, research, and multi-step decision-making.</p>
+          <a href="#contact" class="learn-more">Learn More <i class="fas fa-arrow-right"></i></a>
+        </div>
         
-        <p>Contact us to discuss how we can tailor our services to meet the unique needs of your project.</p>
-        </section>
+        <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="card-icon">
+            <i class="fas fa-code"></i>
+          </div>
+          <h3>Code Loom</h3>
+          <p>A VS Code extension that contextualizes your development environment using AI. Code Loom maps relationships between files, functions, and modules—surfacing insight when and where you need it most. Designed to enhance focus, architecture awareness, and flow state.</p>
+          <a href="#contact" class="learn-more">Learn More <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+      <div class="glow-effect glow-2"></div>
+    </section>
 
+    <!-- Services Section -->
+    <section id="services" data-aos="fade-up">
+      <h1>Services</h1>
+      <p class="section-intro">Tailored AI solutions to enhance your development workflows and business processes.</p>
+      
+      <ul class="service-list">
+        <li data-aos="fade-up" data-aos-delay="100">
+          <div>
+            <strong>Agentic AI System Design</strong>
+            <span>LLM chaining, orchestration, and autonomy</span>
+          </div>
+        </li>
+        <li data-aos="fade-up" data-aos-delay="150">
+          <div>
+            <strong>Custom Developer Tooling</strong>
+            <span>VS Code extensions, CLI tools, and AI copilots</span>
+          </div>
+        </li>
+        <li data-aos="fade-up" data-aos-delay="200">
+          <div>
+            <strong>API & System Integration</strong>
+            <span>Embedding AI-first workflows into existing systems</span>
+          </div>
+        </li>
+        <li data-aos="fade-up" data-aos-delay="250">
+          <div>
+            <strong>Cloud-Native Deployment</strong>
+            <span>Azure, CI/CD, FastAPI, .NET</span>
+          </div>
+        </li>
+        <li data-aos="fade-up" data-aos-delay="300">
+          <div>
+            <strong>Knowledge Management Automation</strong>
+            <span>Search, summarization, and internal AI tools</span>
+          </div>
+        </li>
+      </ul>
+    </section>
 
-        <section id="contact">
-            <h1>Contact Us</h1>
-            <p>Ready to start your next project with us? Email us at <a
-                    href="mailto:info@milesautomation.com">info@milesautomation.com</a> and we will get back to you
-                promptly to discuss how we can help your business thrive with our bespoke automation solutions.</p>
-        </section>
+    <!-- About Section -->
+    <section id="about" data-aos="fade-up">
+      <h1>About</h1>
+      <p>Miles Automation is a boutique consultancy focused on cutting-edge AI and developer tooling. We build custom solutions using agentic AI, LLM orchestration, and scalable cloud-native systems. From R&D prototyping to production-ready tools, we help technical teams level up fast—with systems that think alongside you.</p>
+      
+      <div class="about-features">
+        <div class="feature" data-aos="fade-up" data-aos-delay="100">
+          <i class="fas fa-lightbulb"></i>
+          <h3>Innovation-Focused</h3>
+          <p>Leveraging the latest in AI research and development</p>
+        </div>
+        <div class="feature" data-aos="fade-up" data-aos-delay="150">
+          <i class="fas fa-code-branch"></i>
+          <h3>Technical Excellence</h3>
+          <p>Built by developers, for developers</p>
+        </div>
+        <div class="feature" data-aos="fade-up" data-aos-delay="200">
+          <i class="fas fa-rocket"></i>
+          <h3>Production-Ready</h3>
+          <p>From concept to deployment with scalability in mind</p>
+        </div>
+      </div>
+    </section>
 
-    </main>
+    <!-- Contact Section -->
+    <section id="contact" data-aos="fade-up">
+      <h1>Contact</h1>
+      <div class="contact-content">
+        <p>Let's explore what AI can do for your team. Reach out to discuss your project requirements and how we can help elevate your development workflows.</p>
+        <a href="mailto:info@milesautomation.com" class="mailto-link">
+          <i class="fas fa-envelope"></i> info@milesautomation.com
+        </a>
+      </div>
+    </section>
+  </main>
 
-    <footer>
-        <p>© 2024 Miles Automation. All rights reserved.</p>
-    </footer>
+  <footer>
+    <p>© 2025 Miles Automation. All rights reserved.</p>
+  </footer>
+
+  <!-- Scroll to top button -->
+  <button id="scrollToTop" class="scroll-top" aria-label="Scroll to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    // Initialize AOS animation library
+    document.addEventListener('DOMContentLoaded', function() {
+      AOS.init({
+        duration: 800,
+        easing: 'ease-in-out',
+        once: true
+      });
+      
+      // Header scroll effect
+      const header = document.getElementById('main-header');
+      window.addEventListener('scroll', function() {
+        if (window.scrollY > 50) {
+          header.classList.add('scrolled');
+        } else {
+          header.classList.remove('scrolled');
+        }
+        
+        // Show/hide scroll to top button
+        const scrollBtn = document.getElementById('scrollToTop');
+        if (window.scrollY > 300) {
+          scrollBtn.classList.add('active');
+        } else {
+          scrollBtn.classList.remove('active');
+        }
+      });
+      
+      // Scroll to top button functionality
+      const scrollBtn = document.getElementById('scrollToTop');
+      scrollBtn.addEventListener('click', function() {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      });
+      
+      // Mobile navigation toggle
+      const navToggle = document.getElementById('nav-toggle');
+      const navMenu = document.getElementById('nav-menu');
+      
+      navToggle.addEventListener('click', function() {
+        navMenu.classList.toggle('active');
+      });
+      
+      // Close mobile menu when clicking on a nav link
+      const navLinks = document.querySelectorAll('.nav-link');
+      navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+          navMenu.classList.remove('active');
+        });
+      });
+      
+      // Smooth scroll for all anchor links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          e.preventDefault();
+          
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            const headerHeight = document.getElementById('main-header').offsetHeight;
+            const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+            
+            window.scrollTo({
+              top: targetPosition,
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+  </script>
 </body>
-
 </html>
