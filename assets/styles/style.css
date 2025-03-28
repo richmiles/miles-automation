@@ -790,13 +790,23 @@ a,
   #hero h1 {
     font-size: 2rem; /* Slightly reduced from 2.2rem */
     line-height: 1.4;
-    white-space: nowrap; /* Prevent wrapping */
-    overflow: hidden; /* Hide overflow */
+    white-space: normal; /* Allow text to wrap - MODIFIED HERE */
+    overflow: visible; /* Show overflow - MODIFIED HERE */
+  }
+  
+  .hero-static {
+    display: inline-block; /* Ensure the text can wrap properly - ADDED */
+    white-space: normal; /* ADDED */
   }
   
   .hero-typing {
     font-size: 1.8rem; /* Make typed text a bit smaller than the static text */
     display: inline-block;
+  }
+  
+  /* Add some more space in the hero section to accommodate wrapped text - ADDED */
+  #hero {
+    padding: 3rem 1rem;
   }
   
   /* Re-enable animations on mobile that were disabled */
@@ -822,6 +832,17 @@ a,
   /* Restore section gradients */
   section {
     background: linear-gradient(135deg, var(--color-background), var(--color-surface));
+  }
+}
+
+/* For even smaller screens - ADDED SECTION */
+@media (max-width: 480px) {
+  #hero h1 {
+    font-size: 1.8rem;
+  }
+  
+  .hero-typing {
+    font-size: 1.6rem;
   }
 }
 
