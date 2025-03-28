@@ -4,13 +4,13 @@
  */
 
 document.addEventListener('DOMContentLoaded', function() {
-  // Initialize AOS with performance optimization settings
+  // Initialize AOS with animations enabled on all devices
   AOS.init({
     duration: 500,
     easing: 'ease-in-out',
     once: true,
-    mirror: false,
-    disable: 'mobile' // Disable animations on mobile devices
+    mirror: false
+    // Removed the 'disable: mobile' setting to re-enable animations
   });
 
   // Variables
@@ -146,7 +146,7 @@ document.addEventListener('DOMContentLoaded', function() {
       backDelay: 2000,
       startDelay: 500,
       loop: true,
-      loopCount: isMobile ? 2 : Infinity // Limit loops on mobile
+      loopCount: Infinity // Re-enabled infinite loops on mobile
     });
   }
 

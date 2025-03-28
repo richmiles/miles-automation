@@ -738,39 +738,6 @@ body {
   backface-visibility: hidden;
 }
 
-/* Reduce animation complexity on mobile */
-@media (max-width: 768px) {
-  /* Simplify or disable complex animations on mobile */
-  .central-node, .outer-node {
-    animation: none !important;
-  }
-  
-  .connections line {
-    animation: none !important;
-    stroke-dasharray: none !important;
-    stroke-dashoffset: 0 !important;
-  }
-
-  /* Reduce the weight of box-shadows */
-  section {
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-  }
-
-  /* Use transform: translate3d for smoother animations */
-  [data-aos="fade-up"] {
-    transform: translate3d(0, 20px, 0);
-  }
-
-  [data-aos="fade-up"].aos-animate {
-    transform: translate3d(0, 0, 0);
-  }
-
-  /* Remove heavy backgrounds/gradients where possible */
-  section {
-    background: var(--color-surface);
-  }
-}
-
 /* Improve scrolling performance by marking elements that don't change */
 header, 
 footer, 
@@ -815,4 +782,52 @@ button,
 a, 
 .btn {
   touch-action: manipulation;
+}
+
+/* Added fixes for typewriter effect on mobile */
+@media (max-width: 768px) {
+  /* Make typed text smaller on mobile */
+  #hero h1 {
+    font-size: 2rem; /* Slightly reduced from 2.2rem */
+    line-height: 1.4;
+    white-space: nowrap; /* Prevent wrapping */
+    overflow: hidden; /* Hide overflow */
+  }
+  
+  .hero-typing {
+    font-size: 1.8rem; /* Make typed text a bit smaller than the static text */
+    display: inline-block;
+  }
+  
+  /* Re-enable animations on mobile that were disabled */
+  .central-node, .outer-node {
+    animation: pulse 2.5s ease-in-out infinite !important;
+  }
+  
+  .connections line {
+    animation: draw 3s ease-in-out forwards !important;
+    stroke-dasharray: 100 !important;
+    stroke-dashoffset: 100 !important;
+  }
+  
+  /* Restore AOS animations */
+  [data-aos="fade-up"] {
+    transform: translateY(20px);
+  }
+  
+  [data-aos="fade-up"].aos-animate {
+    transform: translateY(0);
+  }
+  
+  /* Restore section gradients */
+  section {
+    background: linear-gradient(135deg, var(--color-background), var(--color-surface));
+  }
+}
+
+/* Make sure the outer nodes have their original animation */
+@media (max-width: 768px) {
+  .outer-node {
+    animation: pulse-outer 3s ease-in-out infinite alternate !important;
+  }
 }
