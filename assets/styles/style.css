@@ -725,3 +725,94 @@ footer {
   opacity: 0;
   animation: fadeInUp 2s ease 2s forwards;
 }
+
+/* Mobile performance optimization additions */
+
+/* Force hardware acceleration for smoother scrolling */
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  -webkit-overflow-scrolling: touch;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+/* Reduce animation complexity on mobile */
+@media (max-width: 768px) {
+  /* Simplify or disable complex animations on mobile */
+  .central-node, .outer-node {
+    animation: none !important;
+  }
+  
+  .connections line {
+    animation: none !important;
+    stroke-dasharray: none !important;
+    stroke-dashoffset: 0 !important;
+  }
+
+  /* Reduce the weight of box-shadows */
+  section {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  }
+
+  /* Use transform: translate3d for smoother animations */
+  [data-aos="fade-up"] {
+    transform: translate3d(0, 20px, 0);
+  }
+
+  [data-aos="fade-up"].aos-animate {
+    transform: translate3d(0, 0, 0);
+  }
+
+  /* Remove heavy backgrounds/gradients where possible */
+  section {
+    background: var(--color-surface);
+  }
+}
+
+/* Improve scrolling performance by marking elements that don't change */
+header, 
+footer, 
+#hero, 
+.section, 
+.service-card, 
+.feature {
+  will-change: transform;
+}
+
+/* Optimize main content scrolling */
+main {
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Reduce layout shifts by specifying image dimensions */
+.logo {
+  aspect-ratio: 1/1;
+  width: 48px;
+  height: 48px;
+}
+
+/* Optimize visibility transitions */
+.scroll-top {
+  transform: translateZ(0);
+  will-change: opacity;
+}
+
+/* Optimize loader animation */
+.loader {
+  will-change: transform;
+}
+
+/* Optimize SVG animations */
+svg {
+  will-change: transform;
+  transform: translateZ(0);
+}
+
+/* Improve touch response */
+button, 
+a, 
+.btn {
+  touch-action: manipulation;
+}
